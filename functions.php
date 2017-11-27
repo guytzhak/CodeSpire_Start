@@ -56,6 +56,7 @@ Class CodeSpire_FrameWork {
     
     public function helper(){
         include_once('inc/core_func.php');
+	include_once('inc/security.php');
     } 
     
 }
