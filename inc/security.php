@@ -3,7 +3,9 @@
  * Inspired by Simon Bradburys cleanup.php fromb4st theme https://github.com/SimonPadbury/b4st
  */
 
-if ( ! defined( ‘ABSPATH’ ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 
 if ( ! function_exists( 'no_generator' ) ) {
