@@ -45,3 +45,11 @@ if ( ! function_exists( 'show_less_login_info' ) ) {
 } // endif function_exists( 'show_less_login_info' ).
 
 add_filter( 'login_errors', 'show_less_login_info' );
+
+function remove_api() {
+	remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+	remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+	remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+}
+
+add_action( 'after_setup_theme', 'remove_api' );
